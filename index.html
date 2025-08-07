@@ -3,97 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keerthi - Home</title>
+    <title>Login - Welcome Back</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="home-page">
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">Keerthi</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><button class="logout-btn" onclick="logout()">Logout</button></li>
-                </ul>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Login</h1>
+                <p>Please sign in to your account</p>
             </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-container">
-                <h1>Welcome to Your Dashboard</h1>
-                <p>Manage your account and explore amazing features with our modern interface</p>
-                <button class="cta-button" onclick="scrollToFeatures()">Get Started</button>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="thought-section" id="features">
-                <div class="thought-container">
-                    <h2 class="section-title">Daily Inspiration</h2>
-                    
-                    <div class="thought-card">
-                        <blockquote>
-                            "The future belongs to those who believe in the beauty of their dreams."
-                        </blockquote>
-                        <cite>- Eleanor Roosevelt</cite>
-                    </div>
-
-                    <div class="thought-card">
-                        <blockquote>
-                            "Success is not final, failure is not fatal: it is the courage to continue that counts."
-                        </blockquote>
-                        <cite>- Winston Churchill</cite>
-                    </div>
-
-                    <div class="thought-card">
-                        <blockquote>
-                            "The only way to do great work is to love what you do."
-                        </blockquote>
-                        <cite>- Steve Jobs</cite>
-                    </div>
-
-                    <div class="thought-card">
-                        <blockquote>
-                            "Believe you can and you're halfway there."
-                        </blockquote>
-                        <cite>- Theodore Roosevelt</cite>
-                    </div>
-
-                    <div class="thought-card">
-                        <blockquote>
-                            "It does not matter how slowly you go as long as you do not stop."
-                        </blockquote>
-                        <cite>- Confucius</cite>
-                    </div>
-
-                    <div class="thought-card">
-                        <blockquote>
-                            "Your time is limited, don't waste it living someone else's life."
-                        </blockquote>
-                        <cite>- Steve Jobs</cite>
-                    </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <div class="error-message" id="usernameError">Please enter a valid username</div>
                 </div>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#support">Support</a>
-                    <a href="#about">About Us</a>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
                 </div>
-                <p>&copy; 2025 Keerthi. All rights reserved.</p>
-            </div>
-        </footer>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message" id="passwordError">Password must be at least 6 characters long</div>
+                </div>
+                
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            
+            
+        </div>
     </div>
 
     <script src="script.js"></script>
